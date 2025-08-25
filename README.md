@@ -2,7 +2,11 @@
 
 ## 📋 Visão Geral
 
-Este projeto implementa um **autoencoder U-Net melhorado** especializado para detecção de mudanças em imagens SAR (Synthetic Aperture Radar) multi-temporais do Sentinel-1. A rede neural utiliza mecanismos de atenção temporal e espacial para identificar mudanças na superfície terrestre, como enchentes, desmatamento e alterações de uso do solo.
+Este projeto implementa um **autoencoder U-Net** especializado para detecção de mudanças em imagens SAR (Synthetic Aperture Radar) multi-temporais do Sentinel-1. A rede neural utiliza mecanismos de atenção temporal e espacial para identificar mudanças na superfície terrestre, como enchentes, desmatamento e alterações de uso do solo.
+
+A rede Enhanced SAR Autoencoder é um U‑Net adaptado para séries temporais Sentinel‑1, com 64 canais de entrada (32 épocas × 2 bandas VV/VH) definidos globalmente para lidar com a dimensão temporal e espectral do SAR. O encoder empilha blocos residuais e mecanismos de atenção: o primeiro bloco aplica atenção espacial para destacar regiões relevantes no mapa (Conv2D 7×7 + sigmoid), enquanto o segundo utiliza atenção temporal ao projetar cada canal em pesos normalizados via softmax, realçando períodos críticos da série. Esses módulos são integrados ao U‑Net com skip connections, formando um autoencoder profundo que comprime as features no bottleneck e as reconstrói simetricamente no decoder.
+
+Durante o treinamento, a função ChangeDetectionLoss combina erro de reconstrução (MSE) e consistência temporal (L1 entre diferenças consecutivas), pressionando a rede a aprender padrões “normais” e manter coerência ao longo do tempo. Na fase de inferência, o analisador calcula o erro absoluto entre entrada e reconstrução para cada pixel; um limiar baseado em percentil (por padrão, 95%) gera um mapa binário de mudanças, com pós-processamento morfológico para reduzir ruídos. Assim, regiões com alto erro indicam alterações significativas na série temporal SAR, como enchentes ou desmatamentos, sendo realçadas pela atenção espacial e temporal que foca nos locais e instantes mais impactados.
 
 ## 🧠 Arquitetura da Rede Neural
 
