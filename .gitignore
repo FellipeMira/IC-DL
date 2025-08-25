@@ -76,7 +76,6 @@ checkpoints/
 analysis_reports/
 /data
 patch_config.yaml
-/images
 
 # R files
 .Rhistory
