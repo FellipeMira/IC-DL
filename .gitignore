@@ -1,4 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Machine Learning
+*.pth
+*.pkl
+*.h5
+*.hdf5
+*.onnx
+*.pb
+
+# Data files
+*.tif
+*.tiff
+*.png
+*.jpg
+*.jpeg
+*.npy
+*.npz
+*.mat
+
+# Logs
+*.log
+training_log_*
+patch_creation_log*
+patch_metadata*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Results and outputs
+results/
+outputs/
+checkpoints/
+analysis_reports/
 /data
 patch_config.yaml
-patch_creation_log_20250825_101630.txt
-patch_metadata_20250825_101633.yaml
