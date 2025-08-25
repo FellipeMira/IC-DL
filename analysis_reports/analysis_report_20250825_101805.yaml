@@ -1,0 +1,287 @@
+analysis_timestamp: '20250825_101805'
+data_directory: data
+statistics:
+  test:
+    channels:
+    - 64
+    - 64
+    count: 2
+    global_stats:
+      common_channels: 64
+      common_shape: &id002 !!python/tuple
+      - 128
+      - 128
+      - 64
+      max_value: !!python/object/apply:numpy._core.multiarray.scalar
+      - &id001 !!python/object/apply:numpy.dtype
+        args:
+        - f8
+        - false
+        - true
+        state: !!python/tuple
+        - 3
+        - <
+        - null
+        - null
+        - null
+        - -1
+        - -1
+        - 0
+      - !!binary |
+        YkWglgNIC0A=
+      mean_of_means: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        CIi5svxZxz8=
+      mean_std: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        QELgjni94D8=
+      min_value: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+      std_of_means: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        LFyS0LBRqz8=
+    maxs:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        YkWglgNIC0A=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        SefTxn7pCkA=
+    means:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Ex/e5mguzj8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        /fCUfpCFwD8=
+    mins:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    shapes:
+    - *id002
+    - !!python/tuple
+      - 128
+      - 128
+      - 64
+    stds:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        tYvAlAAy4z8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        l/H/EeGR3D8=
+  train:
+    channels:
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+    count: 5
+    global_stats:
+      common_channels: 64
+      common_shape: &id003 !!python/tuple
+      - 128
+      - 128
+      - 64
+      max_value: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        dYP10B8QDEA=
+      mean_of_means: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Ssfm30iIwj8=
+      mean_std: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        bfqFASr33T8=
+      min_value: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+      std_of_means: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        KEBapbLOoz8=
+    maxs:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        aZXYsAFnC0A=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        lTnOR1rjCkA=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        dYP10B8QDEA=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        YkWglgNIC0A=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        VMDfx8ehC0A=
+    means:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        VnOBoFw3xj8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        U0M3KLnYwD8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        Qbcz1CFUtD8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        U74+Wkzmwj8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        1JNwUvmIyD8=
+    mins:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    shapes:
+    - *id003
+    - !!python/tuple
+      - 128
+      - 128
+      - 64
+    - !!python/tuple
+      - 128
+      - 128
+      - 64
+    - !!python/tuple
+      - 128
+      - 128
+      - 64
+    - !!python/tuple
+      - 128
+      - 128
+      - 64
+    stds:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AlepVaOi4D8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        /ahfJ/xs3D8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        bfayd2Pp1j8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        xUD7XEhu3j8=
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        +qoesPFk4T8=
+  val:
+    channels:
+    - 64
+    count: 1
+    global_stats:
+      common_channels: 64
+      common_shape: &id004 !!python/tuple
+      - 128
+      - 128
+      - 64
+      max_value: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        rLWMvHAlDEA=
+      mean_of_means: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        pAJKgY7JzT8=
+      mean_std: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        WjxNtqzN4j8=
+      min_value: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+      std_of_means: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    maxs:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        rLWMvHAlDEA=
+    means:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        pAJKgY7JzT8=
+    mins:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AAAAAAAAAAA=
+    shapes:
+    - *id004
+    stds:
+    - !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        WjxNtqzN4j8=
+summary:
+  splits_available:
+  - train
+  - val
+  - test
+  splits_distribution:
+    test: 2
+    train: 5
+    val: 1
+  total_patches: 8
