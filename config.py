@@ -14,7 +14,7 @@ SEED = 42
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-PATCH_SIZE = 512  # Ou 256 para testes mais rápidos
+PATCH_SIZE = 128  # Ou 256 para testes mais rápidos
 BATCH_SIZE = 8
 EPOCHS = 50
 LR = 1e-4

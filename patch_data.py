@@ -6,8 +6,8 @@ import logging
 from sklearn.model_selection import train_test_split
 
 # Configurações
-PATCH_SIZE = 512  # Ou 256 para patches menores
-OVERLAP = 0.5  # 50% de sobreposição
+PATCH_SIZE = 128  # Ou 256/512 para patches menores
+OVERLAP = 0.3  # 30% de sobreposição
 STRIDE = int(PATCH_SIZE * (1 - OVERLAP))  # Stride = patch_size/2 para 50% overlap
 INPUT_DIR = 'data/raw_images'  # Pasta com imagens SAR originais (.tif)
 OUTPUT_DIR = 'data'  # Pasta base para salvar patches
