@@ -42,10 +42,10 @@ class PatchConfig:
     seed: int = 42
     expected_channels: Optional[int] = None
     default_split: str = 'train'
-    invalid_pixel_threshold: float = 0.95  # Mais permissivo
+    invalid_pixel_threshold: float = 0.99  # Mais permissivo
     check_nan: bool = True
-    normalization: str = 'minmax'  # 'none', 'log1p', 'zscore', 'minmax'
-    quality_threshold: float = 0.1  # Threshold de qualidade do patch
+    normalization: str = 'none'  # 'none', 'log1p', 'zscore', 'minmax'
+    quality_threshold: float = 0.01  # Threshold de qualidade do patch
     max_workers: int = 4
     save_metadata: bool = False
     
@@ -121,7 +121,14 @@ class DataNormalizer:
     @staticmethod
     def normalize_log1p(data: np.ndarray) -> np.ndarray:
         """Normalização logarítmica (padrão para SAR)"""
-        return np.log1p(np.clip(data, 0, None))
+        # Para dados SAR em dB (valores negativos), converter para linear primeiro
+        if np.any(data < 0):
+            # Assumir que dados estão em dB, converter para linear
+            linear_data = 10 ** (data / 10.0)
+            return np.log1p(linear_data)
+        else:
+            # Dados já estão em escala linear
+            return np.log1p(np.clip(data, 0, None))
     
     @staticmethod
     def normalize_zscore(data: np.ndarray) -> np.ndarray:
@@ -653,6 +660,10 @@ def main():
         # Carregar configuração
         if args.config:
             config = load_config_from_file(args.config)
+        elif os.path.exists('patch_config.yaml'):
+            # Usar arquivo de configuração padrão se existir
+            print("📁 Usando configuração de 'patch_config.yaml'")
+            config = load_config_from_file('patch_config.yaml')
         else:
             config = PatchConfig()
         
