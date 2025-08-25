@@ -35,7 +35,7 @@ import shutil
 class PatchConfig:
     """Configurações para criação de patches"""
     patch_size: int = 128
-    overlap: float = 0.3
+    overlap: float = 0.5
     input_dir: str = 'data/raw_images'
     output_dir: str = 'data'
     split_ratios: Dict[str, float] = None
@@ -44,10 +44,10 @@ class PatchConfig:
     default_split: str = 'train'
     invalid_pixel_threshold: float = 0.95  # Mais permissivo
     check_nan: bool = True
-    normalization: str = 'log1p'  # 'none', 'log1p', 'zscore', 'minmax'
+    normalization: str = 'minmax'  # 'none', 'log1p', 'zscore', 'minmax'
     quality_threshold: float = 0.1  # Threshold de qualidade do patch
     max_workers: int = 4
-    save_metadata: bool = True
+    save_metadata: bool = False
     
     def __post_init__(self):
         if self.split_ratios is None:
